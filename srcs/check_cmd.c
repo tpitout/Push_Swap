@@ -6,13 +6,13 @@
 /*   By: tpitout <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/17 19:55:18 by tpitout           #+#    #+#             */
-/*   Updated: 2018/08/19 19:15:40 by tpitout          ###   ########.fr       */
+/*   Updated: 2018/08/20 07:45:33 by tpitout          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int		ft_ccmd(char *l)
+int				ft_ccmd(char *l)
 {
 	if (!ft_strcmp(l, "sa") || !ft_strcmp(l, "sb") ||
 		!ft_strcmp(l, "ss") || !ft_strcmp(l, "pa") ||
@@ -26,7 +26,7 @@ int		ft_ccmd(char *l)
 	return (0);
 }
 
-void	select_function(t_stacks *s, char *str, int p_flag)
+void			select_function(t_stacks *s, char *str, int p_flag)
 {
 	if (ft_strcmp(str, "sa") == 0)
 		sa(s, 0, p_flag);
@@ -52,10 +52,10 @@ void	select_function(t_stacks *s, char *str, int p_flag)
 		rrr(s, 0, p_flag);
 }
 
-int		dub(t_stacks *s)
+int				dub(t_stacks *s)
 {
-	int i;
-	int j;
+	int			i;
+	int			j;
 
 	i = 0;
 	while (i < s->size - 1)
@@ -72,43 +72,7 @@ int		dub(t_stacks *s)
 	return (0);
 }
 
-void	ft_print_arr(t_stacks *s, int x, int y)
+void			print_win(t_stacks *s)
 {
-	int i;
-	int j;
-	int	tmp;
-
-	tmp = 0;
-	i = s->len_a - 1;
-	j = 0;
-//	start_color();
-//	init_pair(1, COLOR_GREEN, COLOR_BLACK);
-//	init_pair(2, COLOR_RED, COLOR_BLACK);
-//	init_pair(3, COLOR_WHITE, COLOR_BLACK);
-	ft_putstr_fd(BLUE "A   B\n", 2);
-	printf("%d" ,y + j);
-	printf(" %d\n", x);
-//	printf(y + j + 1, x, "-\n");
-//	mvprintw(y + j, x + 20, "B\n");
-//	mvprintw(y + j + 1, x + 20, "-\n");
-	j += 2;
-	while (i >= 0)
-		(j <= 84) ? (printf("%d%d%d\n", y + j++, x, s->stack_a[i--])) : (i--);
-	i = s->len_b - 1;
-	j = 2;
-	while (i >= 0)
-		(j <= 84) ? (mvprintw(y + j++, x + 20, "%d\n",
-					s->stack_b[i--])) : (i--);
-}
-
-void	print_win(t_stacks *s, int flag, int f_flag)
-{
-	t_stacks v;
-	int i = flag;
-	int j = f_flag;
-	v = *s;
-	s->moves = s->moves + 1;	
-	i = 0;
-	j = 0;
-
+	s->moves = s->moves + 1;
 }

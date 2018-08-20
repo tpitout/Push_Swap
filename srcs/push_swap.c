@@ -6,7 +6,7 @@
 /*   By: tpitout <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/17 19:45:11 by tpitout           #+#    #+#             */
-/*   Updated: 2018/08/19 19:07:07 by tpitout          ###   ########.fr       */
+/*   Updated: 2018/08/20 07:41:35 by tpitout          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,17 +24,17 @@ void			choose(t_stacks *s, int flag)
 		ft_sort_v5(s, flag);
 }
 
-int			viz2(char **argv)
+int				viz2(char **argv)
 {
 	if (ft_ccmd(argv[1]) == 2)
 		return (1);
 	return (0);
 }
 
-int			main(int argc, char **argv)
+int				main(int argc, char **argv)
 {
 	t_stacks	*s;
-	int		flag;
+	int			flag;
 
 	if (argc > 1)
 	{
@@ -51,7 +51,7 @@ int			main(int argc, char **argv)
 			return (0);
 		}
 		choose(s, flag);
-		if(flag == 1)
+		if (flag == 1)
 			printf(BLUE "%d MOVES\n", s->moves);
 		ft_free(s);
 	}
