@@ -1,6 +1,6 @@
-num=500
+num=100
 case=10
-limit=5300
+limit=1000
 
 exceed=0
 count=1
