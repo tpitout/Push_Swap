@@ -6,7 +6,7 @@
 /*   By: avan-ni <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/07 18:50:29 by avan-ni           #+#    #+#             */
-/*   Updated: 2018/08/19 14:16:27 by tpitout          ###   ########.fr       */
+/*   Updated: 2018/08/20 07:50:01 by tpitout          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	ra(t_stacks *s, int flag, int p_flag)
 		if (flag)
 			write(1, "ra\n", 3);
 		if (p_flag)
-			print_win(s, flag, p_flag);
+			print_win(s);
 	}
 }
 
@@ -52,7 +52,7 @@ void	rb(t_stacks *s, int flag, int p_flag)
 		if (flag)
 			write(1, "rb\n", 3);
 		if (p_flag)
-			print_win(s, flag, p_flag);
+			print_win(s);
 	}
 }
 
@@ -63,5 +63,5 @@ void	rr(t_stacks *s, int flag, int p_flag)
 	if (flag)
 		write(1, "rr\n", 3);
 	if (p_flag)
-		print_win(s, flag, p_flag);
+		print_win(s);
 }

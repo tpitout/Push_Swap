@@ -6,7 +6,7 @@
 /*   By: avan-ni <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/07 18:50:01 by avan-ni           #+#    #+#             */
-/*   Updated: 2018/08/19 14:17:01 by tpitout          ###   ########.fr       */
+/*   Updated: 2018/08/20 07:49:30 by tpitout          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	sa(t_stacks *s, int flag, int p_flag)
 		if (flag)
 			write(1, "sa\n", 3);
 		if (p_flag)
-			print_win(s, flag, p_flag);
+			print_win(s);
 	}
 }
 
@@ -40,7 +40,7 @@ void	sb(t_stacks *s, int flag, int p_flag)
 		if (flag)
 			write(1, "sb\n", 3);
 		if (p_flag)
-			print_win(s, flag, p_flag);
+			print_win(s);
 	}
 }
 
@@ -51,7 +51,7 @@ void	ss(t_stacks *s, int flag, int p_flag)
 	if (flag)
 		write(1, "ss\n", 3);
 	if (p_flag)
-		print_win(s, flag, p_flag);
+		print_win(s);
 }
 
 void	pa(t_stacks *s, int flag, int p_flag)
@@ -64,7 +64,7 @@ void	pa(t_stacks *s, int flag, int p_flag)
 		if (flag)
 			write(1, "pa\n", 3);
 		if (p_flag)
-			print_win(s, flag, p_flag);
+			print_win(s);
 	}
 }
 
@@ -78,6 +78,6 @@ void	pb(t_stacks *s, int flag, int p_flag)
 		if (flag)
 			write(1, "pb\n", 3);
 		if (p_flag)
-			print_win(s, flag, p_flag);
+			print_win(s);
 	}
 }

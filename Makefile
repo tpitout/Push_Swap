@@ -6,7 +6,7 @@
 #    By: tpitout <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/08/17 19:41:05 by tpitout           #+#    #+#              #
-#    Updated: 2018/08/17 19:41:40 by tpitout          ###   ########.fr        #
+#    Updated: 2018/08/20 08:08:05 by tpitout          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,10 +18,10 @@ FLAGS = -Wall -Werror -Wextra
 
 SRCS = srcs/checker_functions.c srcs/checker_functions2.c srcs/checker_functions3.c \
 srcs/init.c srcs/check_cmd.c srcs/check_args.c srcs/sorting_small.c srcs/sorting_big.c \
-srcs/assist.c
+srcs/tools.c
 
 OBJS = checker_functions.o checker_functions2.o checker_functions3.o init.o \
-check_cmd.o check_args.o sorting_small.o sorting_big.o assist.o
+check_cmd.o check_args.o sorting_small.o sorting_big.o tools.o
 
 HEADERS = -I libft/includes -I includes/
 

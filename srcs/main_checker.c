@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main_checker.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: avan-ni <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: tpitout <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/07 18:52:58 by avan-ni           #+#    #+#             */
-/*   Updated: 2018/08/19 14:31:15 by tpitout          ###   ########.fr       */
+/*   Created: 2018/08/20 08:14:53 by tpitout           #+#    #+#             */
+/*   Updated: 2018/08/20 08:17:33 by tpitout          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,8 @@ int		main(int argc, char **argv)
 			ft_free(s);
 			return (0);
 		}
-		(check_sorted(s) && s->len_b == 0) ? (write(1, "OK\n", 3)) :
-			(write(1, "KO\n", 3));
+		(check_sorted(s) && s->len_b == 0) ? (printf(GREEN "OK\n")) :
+			(printf(RED "KO\n"));
 		ft_free(s);
 	}
 	return (0);

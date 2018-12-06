@@ -6,7 +6,7 @@
 /*   By: tpitout <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/17 19:45:11 by tpitout           #+#    #+#             */
-/*   Updated: 2018/08/20 07:41:35 by tpitout          ###   ########.fr       */
+/*   Updated: 2018/08/20 08:07:21 by tpitout          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,13 @@ int				viz2(char **argv)
 	return (0);
 }
 
+void			v(void)
+{
+	printf(CLEAN);
+	printf(GREEN "  PUSH_SWAP  \n===========");
+	printf(RESET "\n");
+}
+
 int				main(int argc, char **argv)
 {
 	t_stacks	*s;
@@ -44,6 +51,8 @@ int				main(int argc, char **argv)
 		s->stack_a = (int *)malloc(sizeof(int) * s->size);
 		s->stack_b = (int *)malloc(sizeof(int) * s->size);
 		s->len_a = s->size;
+		if (flag == 1)
+			v();
 		if (error(argv) || !ft_store_arr(s, argv) || dub(s))
 		{
 			write(1, "Error\n", 6);
@@ -52,7 +61,7 @@ int				main(int argc, char **argv)
 		}
 		choose(s, flag);
 		if (flag == 1)
-			printf(BLUE "%d MOVES\n", s->moves);
+			printf(BLUE "\n%d MOVES\n\n", s->moves);
 		ft_free(s);
 	}
 	return (0);
